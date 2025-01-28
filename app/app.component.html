@@ -1,0 +1,88 @@
+<h3>A4 for {{studentFirst}} {{studentLast}} / {{studentId}}</h3>
+<hr><br>
+
+<!-- FORM START -->
+<form [formGroup]="gariandpForm" (ngSubmit)="onSubmit()">
+    <fieldset>
+        <div class="style">
+            <!-- FORMSAPP -->
+            <div>
+                <mat-form-field appearance="outline" floatLabel="always">
+                    <mat-label>Enter a Sheridan ID</mat-label>
+                    <input matInput formControlName="id991446494">
+                </mat-form-field>
+            </div>
+
+            <div>
+                <mat-form-field appearance="outline" floatLabel="always">
+                    <mat-label>Enter a first name:</mat-label>
+                    <input matInput formControlName="Patricia">
+                </mat-form-field>
+            </div>
+
+            <div>
+                <mat-form-field appearance="outline" floatLabel="always">
+                    <mat-label>Enter a last name:</mat-label>
+                    <input matInput formControlName="Gariando">
+                </mat-form-field>
+            </div>
+        </div>
+    </fieldset>
+    <br>
+    <fieldset>
+        <div class="style">
+            <div>
+                <mat-form-field>
+                    <mat-label>Shirt Size</mat-label>
+                    <mat-select id="shirtSizes" formControlName="gariandpsize">
+                        <mat-option *ngFor="let s of sizeArray" [value]="s.size">{{s.size}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <!-- FORMAPP -->
+            <div>
+                <mat-radio-group formControlName="gariandpcolor" aria-labelledby="radio-label">
+                    <label id="radio-label">Shirt Colour:</label><br><br>
+                    <mat-radio-button [value]="'Blue'">Sheridan Blue</mat-radio-button><br>
+                    <mat-radio-button [value]="'Orange'">Sheridan Orange</mat-radio-button><br>
+                    <mat-radio-button [value]="'Black'">Black</mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <!-- DIRECTIVESAPP + ANGULAR MATERIAL DOC -->
+            <div>
+                <section>
+                    <label id="checkbox-label">Shirt Inclusions:</label><br><br>
+                    <mat-checkbox formControlName="gariandpinclude1">Campus Name</mat-checkbox><br>
+                    <mat-checkbox formControlName="gariandpinclude2">Sheridan Logo</mat-checkbox><br>
+                </section>
+            </div>
+        </div>
+    </fieldset>
+    <br>
+    <fieldset>
+        <div class="style">
+            <div>
+                <mat-form-field>
+                    <!-- ANGULAR MATERIAL DOC -->
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="datepicker" formControlName="gariandpdate">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
+                    <mat-datepicker #datepicker>
+                        <mat-datepicker-actions>
+                            <button mat-button matDatepickerCancel>Cancel</button>
+                            <button mat-raised-button matDatepickerApply>Apply</button>
+                        </mat-datepicker-actions>
+                    </mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div>
+                <button mat-raised-button color="primary" type="submit">Click to Submit Data</button>
+            </div>
+            <div>
+                <div id="formoutput"></div>
+            </div>
+        </div>
+    </fieldset>
+
+</form> <!-- END OF FORM -->

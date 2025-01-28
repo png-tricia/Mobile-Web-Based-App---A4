@@ -1,0 +1,30 @@
+h3 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+form {
+    padding: 25px;
+    width: auto;
+}
+
+#formoutput {
+    border: 1px black solid;
+    font-size: 1em;
+    height: 100px;
+    padding: 15px;
+    text-align: center;
+    width: 300px;
+}
+
+fieldset {
+    border-style: hidden;
+}
+
+.style div {
+    float: left;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 250px;
+}

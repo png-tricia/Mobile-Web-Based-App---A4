@@ -1,0 +1,14 @@
+{
+  "shirtSizes": [
+    {"size": "SM"}, {"size": "MED"},{"size": "LG"},{"size": "XL"},{"size": "XXL"}
+  ],
+  "instructions": 
+    "Change VALUES to include YOUR actual data and defaults for size and colour",
+  "controlDefaults" : {
+    "controlID": "991446494",
+    "controlFirst": "Patricia",
+    "controlLast": "Gariando",
+    "controlSize": "XL",
+    "controlColour": "Blue"  
+  }
+}
